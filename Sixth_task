@@ -71,9 +71,9 @@ int areWordsLexicographicallyOrdered(const char *sentence) {
  return 0; // Первое слово больше в лексикографическом
 порядке (неупорядочено)
  }
-ptr1++;
-ptr2++;
- }
+    ptr1++;
+    ptr2++;
+     }
  // Если одно слово является префиксом другого
  if (ptr1 == previousWord.end && ptr2 != currentWord.end) {
  return 1; // Слова упорядочены (префиксное отношение)
