@@ -61,9 +61,9 @@ int areWordsLexicographicallyOrdered(const char *sentence) {
  // Если не первое слово, сравниваем текущее слово с предыдущим
  if (!areWordsEqual(previousWord, currentWord)) {
  // Сравниваем символы двух слов посимвольно
- char *ptr1 = previousWord.begin;
-char *ptr2 = currentWord.begin;
- while (ptr1 != previousWord.end && ptr2 != currentWord.end) {
+     char *ptr1 = previousWord.begin;
+    char *ptr2 = currentWord.begin;
+     while (ptr1 != previousWord.end && ptr2 != currentWord.end) {
  if (*ptr1 < *ptr2) {
  break; // Первое слово меньше в лексикографическом
 порядке
