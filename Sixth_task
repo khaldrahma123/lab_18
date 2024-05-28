@@ -55,8 +55,8 @@ int areWordsLexicographicallyOrdered(const char *sentence) {
  char *wordEnd = findSpace(wordBegin);
  // Устанавливаем диапазон текущего слова
 13
- currentWord.begin = wordBegin;
- currentWord.end = wordEnd;
+    currentWord.begin = wordBegin;
+    currentWord.end = wordEnd;
  if (!isFirstWord) {
  // Если не первое слово, сравниваем текущее слово с предыдущим
  if (!areWordsEqual(previousWord, currentWord)) {
