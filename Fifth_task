@@ -99,11 +99,11 @@ the lazy dog", source);
  }
  // Тест на замену, где w1 и w2 имеют одинаковую длину
  {
- char source[] = "programming is fun";
- char w1[] = "is";
- char w2[] = "can be";
- replace(source, w1, w2);
- ASSERT_STRING("programming can be fun", source);
+    char source[] = "programming is fun";
+    char w1[] = "is";
+    char w2[] = "can be";
+    replace(source, w1, w2);
+    ASSERT_STRING("programming can be fun", source);
  }
 }
 int main() {
