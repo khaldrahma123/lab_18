@@ -6,13 +6,13 @@ void assertString(const char *expected, char *got,
  const char *fileName, const char *funcName,
 int line) {
  if (my_strcmp(expected, got)) {
- fprintf(stderr, "File %s\n", fileName);
- fprintf(stderr, "%s - failed on line %d\n", funcName, line);
- fprintf(stderr, "Expected: \"%s\"\n", expected);
- fprintf(stderr, "Got: \"%s\"\n\n", got);
- } else {
- fprintf(stderr, "%s - OK\n", funcName);
- }
+    fprintf(stderr, "File %s\n", fileName);
+    fprintf(stderr, "%s - failed on line %d\n", funcName, line);
+    fprintf(stderr, "Expected: \"%s\"\n", expected);
+    fprintf(stderr, "Got: \"%s\"\n\n", got);
+    } else {
+    fprintf(stderr, "%s - OK\n", funcName);
+    }
 }
 int containsAllLetters(const char *str, const char *word) {
  const char *wordPtr = word;
