@@ -124,11 +124,11 @@ char* findPreviousWord(const char *s1, const char *s2) {
  // Тест 1: Проверяем наличие предыдущего слова "hello" в s1 перед первым
 общим словом
 34
- char *previousWord1 = findPreviousWord(s1, s2);
- ASSERT_STRING("hello", previousWord1);
- free(previousWord1);
- const char *s3 = " this is a test";
- const char *s4 = " example of a test";
+    char *previousWord1 = findPreviousWord(s1, s2);
+    ASSERT_STRING("hello", previousWord1);
+    free(previousWord1);
+    const char *s3 = " this is a test";
+    const char *s4 = " example of a test";
  // Тест 2: Проверяем наличие предыдущего слова "a" в s3 перед первым
 общим словом
  char *previousWord2 = findPreviousWord(s3, s4);
