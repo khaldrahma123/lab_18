@@ -40,10 +40,10 @@ int areWordsEqual(WordDescriptor w1, WordDescriptor w2) {
 }
 // Функция для проверки упорядоченности слов в предложении
 int areWordsLexicographicallyOrdered(const char *sentence) {
- WordDescriptor currentWord;
- WordDescriptor previousWord;
- int isFirstWord = 1; // Флаг для определения первого слова
- char *ptr = sentence;
+    WordDescriptor currentWord;
+    WordDescriptor previousWord;
+    int isFirstWord = 1; // Флаг для определения первого слова
+    char *ptr = sentence;
  // Проходим по предложению
  while (*ptr != '\0') {
  // Пропускаем пробелы и определяем начало следующего слова
