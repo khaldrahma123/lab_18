@@ -1,0 +1,45 @@
+char *endOfWord = rend - 1;
+ // Пропускаем пробельные символы в конце слова
+ while (endOfWord >= rbegin && isspace(*endOfWord)) {
+ --endOfWord;
+ }
+ // Устанавливаем указатели на начало и конец слова
+ word->begin = rbegin;
+ word->end = endOfWord + 1;
+ // Перемещаемся с начала к концу слова, сохраняя порядок букв
+ char *writePtr = rbegin;
+ for (char *ptr = rbegin; ptr <= endOfWord; ++ptr) {
+ if (isalpha(*ptr)) {
+ *writePtr++ = *ptr;
+ }
+ }
+ *writePtr = '\0'; // Добавляем завершающий нуль-символ
+ return true; // Всегда возвращаем true, так как всегда находим слово
+}
+void testGetWordReverse() {
+ // Тест 1: Пустая строка
+ char inputString1[] = "";
+ WordDescriptor wordDesc1;
+ getWordReverse(inputString1, inputString1 + strlen(inputString1), 
+&wordDesc1);
+ ASSERT_STRING("", wordDesc1.begin);
+ // Тест 2: Строка с пробелами и цифрами
+ char inputString2[] = "dlr3e 4l1iw4";
+ WordDescriptor wordDesc2;
+ getWordReverse(inputString2, inputString2 + strlen(inputString2), 
+&wordDesc2);
+8
+ ASSERT_STRING("dlreliw", wordDesc2.begin);
+ // Тест для строки " dg123 "
+ char inputString[] = " dg123 ";
+ WordDescriptor wordDesc;
+ getWordReverse(inputString, inputString + strlen(inputString), 
+&wordDesc);
+ ASSERT_STRING("dg", wordDesc.begin);
+}
+int main() {
+ SetConsoleOutputCP(CP_UTF8);
+ testTransformWord();
+ testGetWordReverse();
+ return 0;
+}
