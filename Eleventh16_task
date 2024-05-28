@@ -117,10 +117,10 @@ char* findPreviousWord(const char *s1, const char *s2) {
  }
  return result;
 }
-// Тестовая функция для проверки findPreviousWord
-void testFindPreviousWord() {
- const char *s1 = " hello example world";
- const char *s2 = " this is an example";
+    // Тестовая функция для проверки findPreviousWord
+    void testFindPreviousWord() {
+     const char *s1 = " hello example world";
+     const char *s2 = " this is an example";
  // Тест 1: Проверяем наличие предыдущего слова "hello" в s1 перед первым
 общим словом
 34
