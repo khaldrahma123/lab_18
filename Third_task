@@ -4,9 +4,9 @@ char *endOfWord = rend - 1;
  --endOfWord;
  }
  // Устанавливаем указатели на начало и конец слова
- word->begin = rbegin;
- word->end = endOfWord + 1;
- // Перемещаемся с начала к концу слова, сохраняя порядок букв
+    word->begin = rbegin;
+    word->end = endOfWord + 1;
+    // Перемещаемся с начала к концу слова, сохраняя порядок букв
  char *writePtr = rbegin;
  for (char *ptr = rbegin; ptr <= endOfWord; ++ptr) {
  if (isalpha(*ptr)) {
