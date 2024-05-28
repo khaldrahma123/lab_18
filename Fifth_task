@@ -82,19 +82,19 @@ source);
 void run_replace_tests() {
  // Тест на замену множества вхождений
  {
- char source[] = "apple banana apple orange apple";
- char w1[] = "apple";
- char w2[] = "fruit";
- replace(source, w1, w2);
- ASSERT_STRING("fruit banana fruit orange fruit", source);
+    char source[] = "apple banana apple orange apple";
+    char w1[] = "apple";
+    char w2[] = "fruit";
+    replace(source, w1, w2);
+    ASSERT_STRING("fruit banana fruit orange fruit", source);
  }
  // Тест на замену, где w2 длиннее w1
  {
- char source[] = "The quick brown fox jumps over the lazy dog";
- char w1[] = "fox";
- char w2[] = "beautiful and graceful fox";
- replace(source, w1, w2);
- ASSERT_STRING("The quick brown beautiful and graceful fox jumps over 
+    char source[] = "The quick brown fox jumps over the lazy dog";
+    char w1[] = "fox";
+    char w2[] = "beautiful and graceful fox";
+    replace(source, w1, w2);
+    ASSERT_STRING("The quick brown beautiful and graceful fox jumps over 
 the lazy dog", source);
  }
  // Тест на замену, где w1 и w2 имеют одинаковую длину
